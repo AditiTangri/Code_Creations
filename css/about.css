@@ -257,6 +257,17 @@ html {
   color: var(--royal-purple);
   margin-right: 2rem;
   filter: drop-shadow(0 0 10px rgba(108, 92, 231, 0.3));
+  animation: tilt 3s ease-in-out infinite;
+  transform-origin: center bottom; /* pivot point for nicer tilt */
+}
+
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 }
 
 .education-title {
