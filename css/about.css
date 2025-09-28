@@ -172,13 +172,27 @@ html {
 .section-heading h1 {
   font-size: 4rem;
   font-weight: 800;
-  color: var(--white);
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, var(--royal-purple), var(--deep-navy));
+
+  background: linear-gradient(45deg, #7caaff, #5c7fcf, #3d4f9f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
+
+  animation: scalePulse 3s ease-in-out infinite;
 }
+
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
 
 .section-heading .underline {
   width: 120px;
@@ -251,13 +265,26 @@ html {
   color: var(--white);
   margin-bottom: 0.5rem;
   line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-transform: capitalize; /* optional */
 }
 
 .education-subtitle {
   font-size: 1.2rem;
   color: var(--royal-purple);
   font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-top: 0;
+  opacity: 0.85;
 }
+
+/* Optional: spacing for the container */
+.education-details > div {
+  margin-bottom: 2rem;
+  padding-left: 1rem; /* slight indent */
+  border-left: 3px solid var(--royal-purple); /* decorative bar */
+}
+
 
 .education-details {
   list-style: none;
